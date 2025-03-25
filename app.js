@@ -15,6 +15,11 @@ app.use(cors());
 // Database Connection
 connectDB();
 
+// get
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 // Routes
 app.use('/admin', adminRoutes);
 app.use('/factories', factoryRoutes);
